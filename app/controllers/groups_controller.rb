@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
     @group = Group.create(group_params)
 
     if @group.save
-      redirect_to groups_path
+      redirect_to groups_path, notice: "新增討論版成功"
     else
       render :new
     end
