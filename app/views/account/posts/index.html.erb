@@ -17,7 +17,7 @@
         <tr>
           <td> <%= simple_format(post.content) %> </td>
           <td> <%= link_to(truncate(post.group.title, length: 20), group_path(post.group)) %> </td>
-          <td> <%= post.updated_at.to_s(:short) %> </td>
+          <td> <%= render_post_updated_at(post) %> </td>
           <td> <%= link_to('Edit', edit_group_post_path(post.group, post), class: "btn btn-info btn-xs") %></td>
           <td> <%= link_to('Delete', group_post_path(post.group, post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger btn-xs") %></td>
         </tr>

@@ -20,7 +20,7 @@
           <td> <%= link_to(truncate(group.title, length: 20), group_path(group)) %> </td>
           <td> <%= simple_format(group.description) %> </td>
           <td> <%= group.posts.size %> </td>
-          <td> <%= group.updated_at.to_s(:short) %> </td>
+          <td> <%= render_group_updated_at(group) %> </td>
         </tr>
       <% end %>
     </tbody>
