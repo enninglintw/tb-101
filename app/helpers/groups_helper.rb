@@ -8,4 +8,8 @@ module GroupsHelper
     simple_format(group.description)
   end
 
+  def render_group_title(group)
+    truncate(group.title, length: 20)
+  end
+
 end
